@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<VBox prefHeight="272.0" prefWidth="433.0" xmlns="http://javafx.com/javafx/10.0.2-internal" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.simplenotepad1.HelloController">
+    <children>
+        <TextArea fx:id="textArea" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="239.0" prefWidth="433.0" />
+        <Button fx:id="save" mnemonicParsing="false" text="Button" translateY="5.0">
+            <VBox.margin>
+                <Insets />
+            </VBox.margin></Button>
+    </children>
+</VBox>
