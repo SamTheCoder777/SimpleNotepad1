@@ -1,19 +1,28 @@
 package com.example.simplenotepad1;
 
 import javafx.fxml.FXML;
-import javafx.scene.control.Button;
-import javafx.scene.control.Label;
-import javafx.scene.control.TextArea;
+import javafx.scene.control.*;
 import javafx.stage.FileChooser;
 
 import java.io.*;
+import java.net.URI;
+import java.net.URISyntaxException;
+import java.net.URL;
 
 public class HelloController {
     @FXML
-    private Button save;
+    private MenuItem save;
+
+    @FXML
+    private MenuItem delete;
+
+    @FXML
+    private MenuItem about;
 
     @FXML
     private TextArea textArea;
+
+    private String text;
 
     public HelloController(){
 
@@ -41,6 +50,21 @@ public class HelloController {
             } catch (IOException ex) {
                 System.out.println("");
             }
+        }
+    }
+
+    public void onDelete(){
+        textArea.clear();
+    }
+
+    public void onAbout(){
+        try {
+            java.awt.Desktop.getDesktop().browse(new URL("https://github.com/SamTheCoder777/SimpleNotepad1").toURI());
+        }
+        catch (IOException e) {
+            e.printStackTrace();
+        } catch (URISyntaxException e) {
+            e.printStackTrace();
         }
     }
 }

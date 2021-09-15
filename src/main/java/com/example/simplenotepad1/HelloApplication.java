@@ -6,6 +6,8 @@ import javafx.scene.Scene;
 import javafx.scene.transform.Scale;
 import javafx.stage.Stage;
 import javafx.geometry.Dimension2D;
+import javafx.application.HostServices;
+
 import java.io.IOException;
 
 public class HelloApplication extends Application {

@@ -5,11 +5,25 @@
 
 <AnchorPane minHeight="400.0" minWidth="600.0" xmlns="http://javafx.com/javafx/11.0.2" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.simplenotepad1.HelloController">
    <children>
-        <TextArea fx:id="textArea" AnchorPane.bottomAnchor="40.0" AnchorPane.leftAnchor="10.0" AnchorPane.rightAnchor="10.0" AnchorPane.topAnchor="10.0" />
-      <Pane layoutX="14.0" layoutY="365.0" prefHeight="0.0" prefWidth="107.0" AnchorPane.bottomAnchor="14.0" AnchorPane.leftAnchor="14.0" AnchorPane.rightAnchor="491.0" AnchorPane.topAnchor="365.0">
-         <children>
-              <Button fx:id="save" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" mnemonicParsing="false" onAction="#onSave" pickOnBounds="false" prefHeight="26.0" prefWidth="103.0" text="Save" />
-         </children>
-      </Pane>
+        <TextArea fx:id="textArea" layoutX="10.0" layoutY="31.0" prefHeight="355.0" prefWidth="592.0" AnchorPane.bottomAnchor="14.0" AnchorPane.leftAnchor="10.0" AnchorPane.rightAnchor="10.0" AnchorPane.topAnchor="31.0" />
+      <MenuBar layoutY="2.0" prefHeight="25.0" prefWidth="142.0" style="-fx-background-color: transparent;" AnchorPane.topAnchor="2.0">
+        <menus>
+          <Menu mnemonicParsing="false" text="File">
+            <items>
+              <MenuItem fx:id="save" mnemonicParsing="false" onAction="#onSave" text="Save" />
+            </items>
+          </Menu>
+          <Menu mnemonicParsing="false" text="Edit">
+            <items>
+              <MenuItem fx:id="delete" mnemonicParsing="false" onAction="#onDelete" text="Delete All" />
+            </items>
+          </Menu>
+          <Menu mnemonicParsing="false" text="Help">
+            <items>
+              <MenuItem fx:id="about" mnemonicParsing="false" onAction="#onAbout" text="About" />
+            </items>
+          </Menu>
+        </menus>
+      </MenuBar>
    </children>
 </AnchorPane>
